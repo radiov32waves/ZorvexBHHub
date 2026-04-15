@@ -13,6 +13,7 @@ local Tab = {
 	
     Main = Window:MakeTab({Name = "Main",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
     s1 = Window:MakeTab({Name = "Adoptme",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+	s2 = Window:MakeTab({Name = "Greenville",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
 
 }
 
@@ -31,7 +32,7 @@ local Section = Tab.s1:AddSection({
 	Name = "Adoptme"
 })
 
-Tab.s1:AddParagraph("Adopt Me Scripts")
+Tab.s1:AddParagraph("Adopt Me Scripts",":)")
 
 Tab.s1:AddButton({
 	Name = "TbiGui Script",
@@ -53,6 +54,21 @@ Tab.s1:AddButton({
 	Name = "Free Script",
 	Callback = function()
 		loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))()
+      		print("button pressed")
+  	end    
+})
+--------------------------------------------greenville------------------------------
+local Section = Tab.s2:AddSection({
+	Name = "Greenville"
+})
+
+Tab.s2:AddParagraph("Greenville Scripts",":)")
+
+Tab.s2:AddButton({
+	Name = "Auto Farm",
+	Callback = function()
+		-- do not use xeno or solora
+loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))()
       		print("button pressed")
   	end    
 })
