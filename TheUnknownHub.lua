@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "TheUnknownHub " .. Fluent.Version,
-    SubTitle = "by radiov32waves",
+    Title = "7li Hub " .. Fluent.Version,
+    SubTitle = "by 7LI_7HMEDYT",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, 
@@ -26,7 +26,7 @@ local Options = Fluent.Options
 do
     Fluent:Notify({
         Title = "Notification",
-        Content = "Thanks For Using radiov32waves Script",
+        Content = "Thanks For Using 7LI_7HMEDYT Script",
         SubContent = "SubContent", -- Optional
         Duration = 20 -- Set to nil to make the notification not disappear
     })
@@ -34,7 +34,7 @@ do
 
 
     Tabs.blxScripts:AddParagraph({
-        Title = "My Discord Channel:TheUnknownHub",
+        Title = "My Telegram Channel:aliahmed_7lihub",
         Content = "This will help you find \nall BloxFruits hubs and scripts."
     })
 
@@ -149,35 +149,6 @@ do
 
 
 
-
-    Tabs.adoptme:AddButton({
-        Title = "House Cloner",
-        Description = "Click this to load...",
-        Callback = function()
-            Window:Dialog({
-                Title = "TbiGui Script",
-                Content = "Do you confirm to load this script?",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))()
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-
-
-
-
      Tabs.night:AddButton({
         Title = "Voidware Hub",
         Description = "Click this to load...",
@@ -190,6 +161,7 @@ do
                         Title = "Confirm",
                         Callback = function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+                        end
                     },
                     {
                         Title = "Cancel",
