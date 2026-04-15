@@ -17,7 +17,6 @@ local Tab = {
 
 }
 
-
 ----------------------------------------------main------------------------------------
 local Section = Tab.Main:AddSection({
 	Name = "Main"
@@ -72,9 +71,6 @@ loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce
       		print("button pressed")
   	end    
 })
-
-
-
 
 Tab:AddParagraph("Paragraph","Paragraph Content")
 
