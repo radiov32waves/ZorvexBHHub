@@ -73,7 +73,7 @@ loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce
   	end    
 })
 -----------------------------------------bloxfruit---------------------------------------------
-local Section = Tab.s2:AddSection({
+local Section = Tab.s3:AddSection({
 	Name = "BloxFruit"
 })
 
@@ -194,6 +194,14 @@ Tab.s3:AddButton({
 	Callback = function()
 		repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "BlueXHub Script",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
       		print("button pressed")
   	end    
 })
