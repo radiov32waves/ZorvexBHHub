@@ -10,46 +10,43 @@ local ValidKeys = {
 
 local EnteredKey = ""
 
--- 2. MAIN HUB FUNCTION (YOUR SCRIPT)
+-- 2. MAIN HUB FUNCTION
 function LoadScript()
+    -- Re-loading the source inside the function ensures a fresh UI state
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+    
     local Window = OrionLib:MakeWindow({Name = "ZorvexBH Hub⚡", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
     OrionLib:MakeNotification({
         Name = "Notification!",
         Content = "Thanks For Using radiov32waves Script",
         Image = "rbxassetid://4483345998",
-        Time = 20
+        Time = 10
     })
 
     local Tab = {
-        Main = Window:MakeTab({Name = "Main",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
-        s1 = Window:MakeTab({Name = "Adoptme",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
-        s2 = Window:MakeTab({Name = "Greenville",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
-        s3 = Window:MakeTab({Name = "BloxFruit",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+        Main = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998", PremiumOnly = false}),
+        s1 = Window:MakeTab({Name = "Adoptme", Icon = "rbxassetid://4483345998", PremiumOnly = false}),
+        s2 = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998", PremiumOnly = false}),
+        s3 = Window:MakeTab({Name = "BloxFruit", Icon = "rbxassetid://4483345998", PremiumOnly = false}),
     }
 
-    ----------------------------------------------main------------------------------------
-    local Section = Tab.Main:AddSection({Name = "Main"})
+    -- Main Content
+    Tab.Main:AddSection({Name = "Main"})
     Tab.Main:AddParagraph("My Telegram Channel","ZorvexBHHub")
-    Tab.Main:AddParagraph("What Is ZorvexBHHub Script","Multi-game hub by radiov32waves designed for convenience and support.")					
+    Tab.Main:AddParagraph("About","Multi-game hub by radiov32waves.")					
 
-    ----------------------------------------------adoptme------------------------------------
-    local Section1 = Tab.s1:AddSection({Name = "Adoptme"})
+    -- Adopt Me
+    Tab.s1:AddSection({Name = "Adoptme Scripts"})
     Tab.s1:AddButton({
         Name = "TbiGui Script",
         Callback = function()
             loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))()
         end    
     })
-    Tab.s1:AddButton({
-        Name = "Clone House Script",
-        Callback = function()
-            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))()
-        end    
-    })
 
-    --------------------------------------------greenville------------------------------
-    local Section2 = Tab.s2:AddSection({Name = "Greenville"})
+    -- Greenville
+    Tab.s2:AddSection({Name = "Greenville Scripts"})
     Tab.s2:AddButton({
         Name = "Auto Farm",
         Callback = function()
@@ -57,18 +54,12 @@ function LoadScript()
         end    
     })
 
-    -----------------------------------------bloxfruit---------------------------------------------
-    local Section3 = Tab.s3:AddSection({Name = "BloxFruit"})
+    -- Blox Fruit
+    Tab.s3:AddSection({Name = "BloxFruit Scripts"})
     Tab.s3:AddButton({
-        Name = "Redz Hub Script",
+        Name = "Redz Hub",
         Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true})
-        end    
-    })
-    Tab.s3:AddButton({
-        Name = "BlueXHub Script",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
         end    
     })
 
@@ -100,24 +91,20 @@ KeyTab:AddButton({
         end
 
         if success then
-            local now = os.date("*t")
-            local hours = 23 - now.hour
-            local mins = 59 - now.min
-
             OrionLib:MakeNotification({
                 Name = "Success!",
-                Content = "Key Accepted. Loading ZorvexBH Hub...",
-                Time = 5
+                Content = "Key Accepted. Loading Hub...",
+                Time = 3
             })
 
             task.wait(1)
-            OrionLib:Destroy()
-            task.wait(0.5)
-            LoadScript()
+            OrionLib:Destroy() -- Kills the key window
+            task.wait(1)       -- Crucial delay for cleanup
+            LoadScript()      -- Opens main script
         else
             OrionLib:MakeNotification({
                 Name = "Error",
-                Content = "Invalid Key! Get keys at t.me/ZorvexBHHub",
+                Content = "Invalid Key! Check Telegram.",
                 Time = 5
             })
         end
@@ -125,7 +112,7 @@ KeyTab:AddButton({
 })
 
 KeyTab:AddButton({
-    Name = "Copy Telegram Link",
+    Name = "Copy Telegram",
     Callback = function()
         setclipboard("t.me/ZorvexBHHub")
         OrionLib:MakeNotification({Name = "Copied", Content = "Telegram link copied!", Time = 3})
