@@ -25,6 +25,7 @@ function LoadScript()
         s1 = Window:MakeTab({Name = "Adoptme", Icon = "rbxassetid://4483345998"}),
         s2 = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998"}),
         s3 = Window:MakeTab({Name = "BloxFruit", Icon = "rbxassetid://4483345998"}),
+		s4 = Window:MakeTab({Name = "99Night", Icon = "rbxassetid://4483345998"}),
         Settings = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
     }
 
@@ -58,6 +59,12 @@ function LoadScript()
     Tab.s3:AddButton({Name = "Auto Bounty Script", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
     Tab.s3:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
     Tab.s3:AddButton({Name = "BlueXHub Script", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+
+    ----------------- 99NIGHTS -----------------
+	Tab.s4:AddSection({Name = "99Nght"})
+    Tab.s4:AddButton({Name = "VapeVoidware Script", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
+    Tab.s5:AddParagraph("Even more is on the way!",":)")
+
 
     ----------------- SETTINGS & ANTI-AFK -----------------
     Tab.Settings:AddSection({Name = "Hub Settings"})
