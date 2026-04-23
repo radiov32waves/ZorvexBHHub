@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
--- 1. YOUR KEY LIST (Includes 9999 + 10 Random Keys)
+-- 1. YOUR KEY LIST
 local ValidKeys = {
     "9999",
     "8F2R7K9A1Q", "3M5V6N8X2P", "9L1B4C7Z6W", "2S9XPBUI5Z",
@@ -10,16 +10,68 @@ local ValidKeys = {
 
 local EnteredKey = ""
 
--- 2. MAIN HUB FUNCTION
+-- 2. MAIN HUB FUNCTION (YOUR SCRIPT)
 function LoadScript()
     local Window = OrionLib:MakeWindow({Name = "ZorvexBH Hub⚡", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-    
-    local Tab1 = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"})
-    Tab1:AddSection({Name = "Welcome to ZorvexBH"})
-    Tab1:AddParagraph("Status", "Full Access Granted.")
 
-    -- Your other tabs (Adoptme, Greenville, etc.) go here
-    
+    OrionLib:MakeNotification({
+        Name = "Notification!",
+        Content = "Thanks For Using radiov32waves Script",
+        Image = "rbxassetid://4483345998",
+        Time = 20
+    })
+
+    local Tab = {
+        Main = Window:MakeTab({Name = "Main",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+        s1 = Window:MakeTab({Name = "Adoptme",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+        s2 = Window:MakeTab({Name = "Greenville",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+        s3 = Window:MakeTab({Name = "BloxFruit",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+    }
+
+    ----------------------------------------------main------------------------------------
+    local Section = Tab.Main:AddSection({Name = "Main"})
+    Tab.Main:AddParagraph("My Telegram Channel","ZorvexBHHub")
+    Tab.Main:AddParagraph("What Is ZorvexBHHub Script","Multi-game hub by radiov32waves designed for convenience and support.")					
+
+    ----------------------------------------------adoptme------------------------------------
+    local Section1 = Tab.s1:AddSection({Name = "Adoptme"})
+    Tab.s1:AddButton({
+        Name = "TbiGui Script",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))()
+        end    
+    })
+    Tab.s1:AddButton({
+        Name = "Clone House Script",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))()
+        end    
+    })
+
+    --------------------------------------------greenville------------------------------
+    local Section2 = Tab.s2:AddSection({Name = "Greenville"})
+    Tab.s2:AddButton({
+        Name = "Auto Farm",
+        Callback = function()
+            loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))()
+        end    
+    })
+
+    -----------------------------------------bloxfruit---------------------------------------------
+    local Section3 = Tab.s3:AddSection({Name = "BloxFruit"})
+    Tab.s3:AddButton({
+        Name = "Redz Hub Script",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true})
+        end    
+    })
+    Tab.s3:AddButton({
+        Name = "BlueXHub Script",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+        end    
+    })
+
     OrionLib:Init()
 end
 
@@ -27,14 +79,12 @@ end
 local KeyWindow = OrionLib:MakeWindow({Name = "Key System | ZorvexBH", HidePremium = true, SaveConfig = false})
 local KeyTab = KeyWindow:MakeTab({Name = "Verification", Icon = "rbxassetid://4483345998"})
 
-KeyTab:AddParagraph("Instructions", "Enter a key from Telegram and press Check.")
-
 KeyTab:AddTextbox({
-    Name = "Enter Key Here",
+    Name = "Enter Key",
     Default = "",
     TextDisappear = false,
     Callback = function(Value)
-        EnteredKey = Value -- Simply stores the text
+        EnteredKey = Value
     end
 })
 
@@ -56,7 +106,7 @@ KeyTab:AddButton({
 
             OrionLib:MakeNotification({
                 Name = "Success!",
-                Content = "Key Valid. Time left: " .. hours .. "h " .. mins .. "m",
+                Content = "Key Accepted. Loading ZorvexBH Hub...",
                 Time = 5
             })
 
@@ -66,8 +116,8 @@ KeyTab:AddButton({
             LoadScript()
         else
             OrionLib:MakeNotification({
-                Name = "Access Denied",
-                Content = "Invalid key. Check Telegram @ZorvexBHHub",
+                Name = "Error",
+                Content = "Invalid Key! Get keys at t.me/ZorvexBHHub",
                 Time = 5
             })
         end
@@ -78,7 +128,7 @@ KeyTab:AddButton({
     Name = "Copy Telegram Link",
     Callback = function()
         setclipboard("t.me/ZorvexBHHub")
-        OrionLib:MakeNotification({Name = "Copied", Content = "Link copied to clipboard!", Time = 3})
+        OrionLib:MakeNotification({Name = "Copied", Content = "Telegram link copied!", Time = 3})
     end
 })
 
