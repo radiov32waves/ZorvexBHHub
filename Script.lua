@@ -14,7 +14,7 @@ local EnteredKey = ""
 function LoadScript()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
     local Window = OrionLib:MakeWindow({
-        Name = "Key System | ZorvexBH Hub⚡ | by radiov32waves", 
+        Name = "ZorvexBH Hub⚡ | by radiov32waves", 
         HidePremium = false, 
         SaveConfig = true, 
         ConfigFolder = "OrionTest"
@@ -30,7 +30,7 @@ function LoadScript()
 
     ----------------- MAIN -----------------
     Tab.Main:AddSection({Name = "Information"})
-    Tab.Main:AddParagraph("My Telegram Channel","ZorvexBHHub")
+    Tab.Main:AddParagraph("My Telegram Channel",":)")
     Tab.Main:AddButton({
         Name = "Copy Telegram Link",
         Callback = function()
