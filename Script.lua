@@ -27,6 +27,8 @@ function LoadScript()
     -- MAIN
     MainTab:AddSection({Name = "Information"})
     MainTab:AddParagraph([[
+
+    
 Welcome to LucasHub! 
 This script is manually maintained to ensure the 
 best possible experience for mobile users.
