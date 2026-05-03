@@ -2,7 +2,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/rad
 local Player = game.Players.LocalPlayer
 
 
-Nova:MakeWindow({ PremiumIds = { 2313748922, 8014300765, 7311487885}})
 
 local PremiumUsers = {
     [2313748922] = true, -- User: Ali Ahmed
