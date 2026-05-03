@@ -28,15 +28,9 @@ function LoadScript()
     MainTab:AddSection({Name = "Information"})
     MainTab:AddParagraph([[
 Welcome to LucasHub! 
-
 This script is manually maintained to ensure the 
 best possible experience for mobile users.
-
-Join our Discord for:
-- Latest updates
-- New script releases
-- Support and community help.
-        ]])
+]])
     MainTab:AddButton({
         Name = "Copy Discord Link",
         Callback = function()
