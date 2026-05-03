@@ -1,108 +1,105 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/radiov32waves/NovaLibv2/refs/heads/main/Script.lua')))()
+local Nova = loadstring(game:HttpGet("https://raw.githubusercontent.com/radiov32waves/NovaLibv2/refs/heads/main/Script.lua"))()
 local Player = game.Players.LocalPlayer
 
-
-
-local PremiumUsers = {
-    [2313748922] = true, -- User: Ali Ahmed
-    [8014300765] = true, -- Premium User 1
-    [7311487885] = true, -- Premium User 2
-}
-
--- 🔑 RANDOMIZED KEY LIST (For Free Users)
+-- RANDOMIZED KEY LIST
 local ValidKeys = {
-    "QX92-ZT11-L04B",
-    "WK88-MP44-X77R",
-    "BT55-GH22-N99P",
-    "JV33-PL66-K11M",
-    "YQ77-RD88-C44S"
+    "QX92-ZT11-L04B", "WK88-MP44-X77R", "BT55-GH22-N99P", "JV33-PL66-K11M", "YQ77-RD88-C44S"
 }
 
--- 🚀 MAIN HUB FUNCTION
 function LoadScript()
-    local Window = OrionLib:MakeWindow({
-        Name = "LucasHub | by radiov32waves",
-        HidePremium = false,
+    local Window = Nova:MakeWindow({
+        Name = "LucasHub | Nova Edition",
+        IntroEnabled = true,
+        IntroText = "Welcome back, " .. Player.Name,
         SaveConfig = true,
-        ConfigFolder = "LucasHubConfig"
+        ConfigFolder = "LucasHubConfig",
+        PremiumIds = {2313748922, 8014300765, 7311487885} -- Integrated Premium IDs
     })
 
-    -- GAME TABS
-    local Tab = {
-        Main = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"}),
-        AdoptMe = Window:MakeTab({Name = "Adopt Me", Icon = "rbxassetid://4483345998"}),
-        Greenville = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998"}),
-        BloxFruit = Window:MakeTab({Name = "Blox Fruit", Icon = "rbxassetid://4483345998"}),
-        Night99 = Window:MakeTab({Name = "99 Night", Icon = "rbxassetid://4483345998"}),
-        Settings = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
-    }
+    -- TABS
+    local MainTab = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"})
+    local AdoptMeTab = Window:MakeTab({Name = "Adopt Me", Icon = "rbxassetid://4483345998"})
+    local GreenvilleTab = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998"})
+    local BloxFruitTab = Window:MakeTab({Name = "Blox Fruit", Icon = "rbxassetid://4483345998"})
+    local Night99Tab = Window:MakeTab({Name = "99 Night", Icon = "rbxassetid://4483345998"})
+    local SettingsTab = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
 
-    ----------------- MAIN -----------------
-    Tab.Main:AddSection({Name = "Information"})
-    Tab.Main:AddButton({
+    -- MAIN
+    MainTab:AddSection({Name = "Information"})
+    MainTab:AddButton({
         Name = "Copy Discord Link",
         Callback = function()
             setclipboard("https://discord.gg/pscCWsvM")
-            OrionLib:MakeNotification({Name = "Success", Content = "Discord link copied!", Time = 3})
+            Nova:MakeNotification({Name = "Success", Content = "Discord link copied!", Time = 3})
         end
     })
 
-    ----------------- ADOPT ME -----------------
-    Tab.AdoptMe:AddSection({Name = "Adopt Me Scripts"})
-    Tab.AdoptMe:AddButton({Name = "TbiGui Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))() end})
-    Tab.AdoptMe:AddButton({Name = "Clone House Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))() end})
-    Tab.AdoptMe:AddButton({Name = "Ragesploit Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/875033288c5e99d576622aced60a0c44.lua"))() end})
-    Tab.AdoptMe:AddButton({Name = "Free Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))() end})
+    -- ADOPT ME
+    AdoptMeTab:AddSection({Name = "Adopt Me Scripts"})
+    AdoptMeTab:AddButton({Name = "TbiGui Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))() end})
+    AdoptMeTab:AddButton({Name = "Clone House Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))() end})
+    AdoptMeTab:AddButton({Name = "Ragesploit Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/875033288c5e99d576622aced60a0c44.lua"))() end})
+    AdoptMeTab:AddButton({Name = "Free Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))() end})
 
-    ----------------- GREENVILLE -----------------
-    Tab.Greenville:AddSection({Name = "Greenville Scripts"})
-    Tab.Greenville:AddButton({Name = "Auto Farm", Callback = function() loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))() end})
+    -- GREENVILLE
+    GreenvilleTab:AddSection({Name = "Greenville Scripts"})
+    GreenvilleTab:AddButton({Name = "Auto Farm", Callback = function() loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))() end})
 
-    ----------------- BLOX FRUIT -----------------
-    Tab.BloxFruit:AddSection({Name = "Blox Fruit Scripts"})
-    Tab.BloxFruit:AddButton({Name = "Redz Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true}) end})
-    Tab.BloxFruit:AddButton({Name = "GravityHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))() end})
-    Tab.BloxFruit:AddButton({Name = "Kaitun", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Kaitun.lua"))() end})
-    Tab.BloxFruit:AddButton({Name = "Find Fruit", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/FindFruit.lua"))() end})
-    Tab.BloxFruit:AddButton({Name = "Auto Bounty", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
-    Tab.BloxFruit:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
-    Tab.BloxFruit:AddButton({Name = "BlueXHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+    -- BLOX FRUIT
+    BloxFruitTab:AddSection({Name = "Blox Fruit Scripts"})
+    BloxFruitTab:AddButton({Name = "Redz Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true}) end})
+    BloxFruitTab:AddButton({Name = "BlueXHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+    BloxFruitTab:AddButton({Name = "GravityHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Kaitun", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Kaitun.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Find Fruit", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/FindFruit.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Auto Bounty", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
+    BloxFruitTab:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
 
-    ----------------- 99 NIGHTS -----------------
-    Tab.Night99:AddSection({Name = "99 Night Scripts"})
-    Tab.Night99:AddButton({Name = "VapeVoidware", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
+    -- 99 NIGHTS
+    Night99Tab:AddSection({Name = "99 Night Scripts"})
+    Night99Tab:AddButton({Name = "VapeVoidware", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
 
-    ----------------- SETTINGS (ANTI-AFK) -----------------
-    Tab.Settings:AddSection({Name = "Configuration"})
-    Tab.Settings:AddToggle({
+    -- ANTI-AFK
+    SettingsTab:AddSection({Name = "Configuration"})
+    SettingsTab:AddToggle({
         Name = "Anti-AFK",
         Default = false,
         Callback = function(Value)
             _G.AntiAFK = Value
-            if _G.AntiAFK then
-                game.Players.LocalPlayer.Idled:Connect(function()
+            task.spawn(function()
+                while _G.AntiAFK do
                     game:GetService("VirtualUser"):CaptureController()
                     game:GetService("VirtualUser"):ClickButton2(Vector2.new())
-                end)
-                OrionLib:MakeNotification({Name = "System", Content = "Anti-AFK Enabled", Time = 3})
-            end
+                    task.wait(60)
+                end
+            end)
         end
     })
 
-    OrionLib:Init()
+    Nova:Init()
 end
 
--- 🛡️ ACCESS CHECK
-if PremiumUsers[Player.UserId] then
-    LoadScript() -- Skip Key System
+-- KEY SYSTEM / PREMIUM CHECK
+local isPremium = table.find({2313748922, 8014300765, 7311487885}, Player.UserId)
+
+if isPremium then
+    LoadScript()
 else
-    -- 🔑 FREE KEY SYSTEM UI
-    local KeyWindow = OrionLib:MakeWindow({Name = "Key System | LucasHub", HidePremium = true})
-    local VerifyTab = KeyWindow:MakeTab({Name = "Verification", Icon = "rbxassetid://4483345998"})
+    local KeyWindow = Nova:MakeWindow({Name = "Key System | LucasHub", IntroEnabled = false})
+    local VerifyTab = KeyWindow:MakeTab({Name = "Verify", Icon = "rbxassetid://4483345998"})
     local EnteredKey = ""
+
+    VerifyTab:AddButton({
+        Name = "Get Key (Website)",
+        Callback = function() 
+            setclipboard("https://radiov32waves.github.io/Key/") 
+            Nova:MakeNotification({Name = "System", Content = "Key link copied!", Time = 3})
+        end
+    })
 
     VerifyTab:AddTextbox({
         Name = "Enter Key",
+        Default = "",
         Callback = function(Value) EnteredKey = Value end
     })
 
@@ -113,18 +110,16 @@ else
             for _, key in pairs(ValidKeys) do
                 if EnteredKey == key then success = true break end
             end
+
             if success then
-                OrionLib:Destroy()
+                Nova:MakeNotification({Name = "Success", Content = "Key Verified!", Time = 2})
+                task.wait(1)
+                Nova:Destroy()
                 LoadScript()
             else
-                OrionLib:MakeNotification({Name = "Error", Content = "Invalid Key!", Time = 3})
+                Nova:MakeNotification({Name = "Error", Content = "Invalid Key!", Time = 3})
             end
         end
     })
-   
-    VerifyTab:AddButton({
-        Name = "Get Key (Website)",
-        Callback = function() setclipboard("https://radiov32waves.github.io/Key/") end
-    })
-    OrionLib:Init()
+    Nova:Init()
 end
