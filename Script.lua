@@ -8,7 +8,7 @@ local ValidKeys = {
 
 function LoadScript()
     local Window = Nova:MakeWindow({
-        Name = "LucasHub | Nova Edition",
+        Name = "LucasHub | by radiov32waves",
         IntroEnabled = true,
         IntroText = "Welcome back, " .. Player.Name,
         SaveConfig = true,
@@ -26,6 +26,10 @@ function LoadScript()
 
     -- MAIN
     MainTab:AddSection({Name = "Information"})
+    MainTab:AddLabel({
+        Name = "LucasHub Description",
+        Content = "Welcome to LucasHub. This script is manually maintained for the best mobile experience. Join our Discord for updates and new scripts."
+    })
     MainTab:AddButton({
         Name = "Copy Discord Link",
         Callback = function()
