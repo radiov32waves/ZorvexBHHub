@@ -1,7 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/radiov32waves/NovaLibv2/refs/heads/main/Script.lua')))()
 local Player = game.Players.LocalPlayer
 
--- 💎 PREMIUM WHITELIST (Skip Key System)
+
+Nova:MakeWindow({ PremiumIds = { 2313748922, 8014300765, 7311487885}})
+
 local PremiumUsers = {
     [2313748922] = true, -- User: Ali Ahmed
     [8014300765] = true, -- Premium User 1
