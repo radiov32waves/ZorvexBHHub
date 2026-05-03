@@ -26,7 +26,7 @@ function LoadScript()
 
     -- MAIN
     MainTab:AddSection({Name = "Information"})
-    Tab:AddParagraph("Hub Description", "Welcome to LucasHub. This script is manually maintained for the best mobile experience. Join our Discord for updates and new scripts.")
+    MainTab:AddParagraph("Hub Description", "Welcome to LucasHub. This script is manually maintained for the best mobile experience. Join our Discord for updates and new scripts.")
     MainTab:AddButton({
         Name = "Copy Discord Link",
         Callback = function()
