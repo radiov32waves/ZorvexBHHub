@@ -29,9 +29,8 @@ function LoadScript()
     MainTab:AddParagraph([[
 
 
-Welcome to LucasHub! 
-This script is manually maintained to ensure the 
-best possible experience for mobile users.
+"Welcome to **LucasHub**, glad to have you here! We keep things updated and 
+running smooth for mobile, so hope you enjoy the scripts."
 ]])
     MainTab:AddButton({
         Name = "Copy Discord Link",
