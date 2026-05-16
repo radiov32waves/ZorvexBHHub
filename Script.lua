@@ -33,7 +33,7 @@ function LoadScript()
 
 
 
-    local moreTab = Window:MakeTab({Name = "More Coming!", Icon = "rbxassetid://4483345998"})
+    local morescriptTab = Window:MakeTab({Name = "More Coming!", Icon = "rbxassetid://4483345998"})
     local SettingsTab = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
 
 
@@ -120,12 +120,47 @@ brainrotTab:AddParagraph([[
 Even more scripts are being added soon, stay tuned!
 ]])
 
-moretab:AddSection({Name = "More Coming!"})
-moreTab:AddParagraph([[
+
+
+
+
+
+morescripttab:AddSection({Name = "More Coming!"})
+morescriptTab:AddParagraph([[
 
 
 Even more scripts are being added soon, stay tuned!
 ]])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 SettingsTab:AddSection({Name = "Settings"})
