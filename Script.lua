@@ -30,6 +30,9 @@ function LoadScript()
     local BloxFruitTab = Window:MakeTab({Name = "Blox Fruit", Icon = "rbxassetid://4483345998"})
     local Night99Tab = Window:MakeTab({Name = "99 Night", Icon = "rbxassetid://4483345998"})
     local brainrotTab = Window:MakeTab({Name = "SABR", Icon = "rbxassetid://4483345998"})
+    local ninjaTab = Window:MakeTab({Name = "Ninga Legends", Icon = "rbxassetid://4483345998"})
+    local brookTab = Window:MakeTab({Name = "Brookhaven RP", Icon = "rbxassetid://4483345998"})
+
 
 
 
@@ -119,6 +122,30 @@ brainrotTab:AddParagraph([[
 
 Even more scripts are being added soon, stay tuned!
 ]])
+
+
+
+
+
+
+
+ninjaTab:AddSection({Name = "Ninja Legends Scripts"})
+ninjaTab:AddButton({Name = "Zepsyy Script  (Keyless)", Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Zepsyy2/asd/main/Ninja%20Legends.lua", true))() end})
+
+ninjaTab:AddButton({Name = "BiTeC Script  (Need-Key)", Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/deposible/The-Bitcoin-Script/refs/heads/main/BiTeC.lua", true))() end})
+
+ninjaTab:AddParagraph([[
+
+
+Even more scripts are being added soon, stay tuned!
+]])
+
+brookTab:AddSection({Name = "Brookhaven Scripts"})
+brookTab:AddButton({Name = "Sander XY Script  (Keyless)", Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/testUIDK/refs/heads/main/panel.lua", true))() end})
+
 
 
 
