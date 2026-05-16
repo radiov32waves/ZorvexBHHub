@@ -33,7 +33,7 @@ function LoadScript()
 
 
 
-    local 6Tab = Window:MakeTab({Name = "More Coming!", Icon = "rbxassetid://4483345998"})
+    local moreTab = Window:MakeTab({Name = "More Coming!", Icon = "rbxassetid://4483345998"})
     local SettingsTab = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
 
 
@@ -113,9 +113,8 @@ brainrotTab:AddButton({Name = "Alone & FR Hub  (Keyless)", Callback = function()
 Even more scripts are being added soon, stay tuned!
 ]])
 
-
-6Tab:AddSection({Name = "More Coming!"})
-6Tab:AddParagraph([[
+moretab:AddSection({Name = "More Coming!"})
+moreTab:AddParagraph([[
 
 
 Even more scripts are being added soon, stay tuned!
