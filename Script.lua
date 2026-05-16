@@ -103,11 +103,18 @@ Even more scripts are being added soon, stay tuned!
 ]])
 
 --end
+
+
+
+
+
+
+
 brainrotTab:AddSection({Name = "Steal A Brainrot Scripts"})
 brainrotTab:AddButton({Name = "Alone & FR Hub  (Keyless)", Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/salihmahdu12-ui/SA-ALONE-THE-REAL/refs/heads/main/.SA%20%7C%20SAB.lua", true))() end})
 
-    brainrotTab:AddParagraph([[
+brainrotTab:AddParagraph([[
 
 
 Even more scripts are being added soon, stay tuned!
