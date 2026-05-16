@@ -125,7 +125,7 @@ Even more scripts are being added soon, stay tuned!
 
 
 
-morescripttab:AddSection({Name = "More Coming!"})
+morescriptTab:AddSection({Name = "More Coming!"})
 morescriptTab:AddParagraph([[
 
 
