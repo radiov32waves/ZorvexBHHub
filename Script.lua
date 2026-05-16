@@ -13,7 +13,14 @@ function LoadScript()
         IntroText = "Welcome back, " .. Player.Name,
         SaveConfig = true,
         ConfigFolder = "LucasHubConfig",
-        PremiumIds = {2313748922, 8014300765, 7311487885, 7186028076} -- Integrated Premium IDs
+        PremiumIds = 
+        {2313748922,
+         8014300765,
+         7311487885,
+         7186028076,
+         4607793937,
+         1943414175,
+         10915972668} -- Integrated Premium IDs
     })
 
     -- TABS
@@ -22,7 +29,14 @@ function LoadScript()
     local GreenvilleTab = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998"})
     local BloxFruitTab = Window:MakeTab({Name = "Blox Fruit", Icon = "rbxassetid://4483345998"})
     local Night99Tab = Window:MakeTab({Name = "99 Night", Icon = "rbxassetid://4483345998"})
+    local brainrotTab = Window:MakeTab({Name = "SABR", Icon = "rbxassetid://4483345998"})
+
+
+
+    local 6Tab = Window:MakeTab({Name = "More Coming!", Icon = "rbxassetid://4483345998"})
     local SettingsTab = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
+
+
 
     -- MAIN
     MainTab:AddSection({Name = "Information"})
@@ -80,58 +94,67 @@ Even more scripts are being added soon, stay tuned!
 
     -- 99 NIGHTS
     Night99Tab:AddSection({Name = "99 Night Scripts"})
-    Night99Tab:AddButton({Name = "VapeVoidware  (Keyless)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
+    Night99Tab:AddButton({Name = "VapeVoidware  (Keyless)", Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
     Night99Tab:AddParagraph([[
 
 
 Even more scripts are being added soon, stay tuned!
 ]])
 
+--end
+brainrotTab:AddSection({Name = "Steal A Brainrot Scripts"})
+brainrotTab:AddButton({Name = "Alone & FR Hub  (Keyless)", Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/salihmahdu12-ui/SA-ALONE-THE-REAL/refs/heads/main/.SA%20%7C%20SAB.lua", true))() end})
+
+    brainrotTab:AddParagraph([[
 
 
+Even more scripts are being added soon, stay tuned!
+]])
 
 
+6Tab:AddSection({Name = "More Coming!"})
+6Tab:AddParagraph([[
 
-    -- ANTI-AFK
-    SettingsTab:AddSection({Name = "Configuration"})
-    SettingsTab:AddToggle({
-        Name = "Anti-AFK",
-        Default = false,
-        Callback = function(Value)
-            _G.AntiAFK = Value
-            task.spawn(function()
-                while _G.AntiAFK do
-                    game:GetService("VirtualUser"):CaptureController()
-                    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
-                    task.wait(60)
-                end
-            end)
+
+Even more scripts are being added soon, stay tuned!
+]])
+
+
+SettingsTab:AddSection({Name = "Settings"})
+SettingsTab:AddParagraph([[
+
+
+Bypasses keys. Use at your own risk.
+]])
+
+
+    SettingsTab:AddButton({
+        Name = "5XY'S BYPASS LINK",
+        Callback = function()
+            setclipboard("https://bypass.5xy.online/")
+            Nova:MakeNotification({Name = "Success", Content = "link copied!", Time = 3})
         end
     })
 
-SettingsTab:AddButton({
-    Name = "Destroy All Scripts",
-    Callback = function()
-        -- 1. Signals all loops to stop
-        _G.LucasHubRunning = false 
-        
-        -- 2. Finds and deletes the UI folder
-        -- If your UI variable is 'Window', use Window:Destroy()
-        -- Otherwise, this looks for the folder by name:
-        local UI = game:GetService("CoreGui"):FindFirstChild("LucasHub") or 
-                   game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LucasHub")
-        
-        if UI then
-            UI:Destroy()
-        end
-    end
-})
+
+
 
     Nova:Init()
 end
 
 -- KEY SYSTEM / PREMIUM CHECK
-local isPremium = table.find({2313748922, 8014300765, 7311487885, 7186028076}, Player.UserId)
+local isPremium = 
+table.find(
+    {2313748922,
+    8014300765,
+    7311487885,
+    7186028076,
+    4607793937,
+    1943414175,
+    10915972668}, 
+    Player.UserId)
 
 if isPremium then
     LoadScript()
